@@ -6,7 +6,9 @@
   </ol>
 </nav>
 <div class="div row mb-4">
-  <div class="col-md"><h1 class="h2 border-left pl-2">Formulario de catetoria</h1></div>
+  <div class="col-md"><h1 class="h2 border-left pl-2">Formulario de catetoria {{currentAction}}
+  </h1>
+</div>
   <div class="col-md">
     <a routerLink="/categories" class="btn btn-success float-right">
       << Voltar
@@ -14,7 +16,7 @@
   </div>
 </div>
 
-<form>
+<form [formGroup]='categoryForm'>
 
   <div class="card">
     <div class="card-header">
