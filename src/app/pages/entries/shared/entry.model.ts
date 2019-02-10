@@ -4,10 +4,10 @@ export class Entry {
   constructor(
     public id?: number,
     public name?: string,
-    public descriptio?: string,
+    public description?: string,
     public type?: string,
     public amount?: string,
-    public data?: string,
+    public date?: string,
     public paid?: boolean,
     public catogoryId?: number,
     public catogory?: Category,
