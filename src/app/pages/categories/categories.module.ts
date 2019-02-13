@@ -11,4 +11,4 @@ import { SharedModule } from '../../shared/shared.module';
     CategoriesRoutingModule,
   ]
 })
-export class CategoriesModule { }
+export class CategoriesModule {}
