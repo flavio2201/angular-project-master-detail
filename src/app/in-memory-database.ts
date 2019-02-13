@@ -17,16 +17,12 @@ export class InMemoryDatabase implements InMemoryDbService {
       ];
 
   const entries: Entry[] =  [
-        { id: 1, name: 'Despesa ABC', catogoryId: categories[0].id, catogory: categories[0], paid: true,
-         date: '14/04/2019', amount: '70,80', type: 'expense', description: 'Teste' } as Entry,
-         { id: 2, name: 'Despesa BCD', catogoryId: categories[1].id, catogory: categories[1], paid: false,
-         date: '14/04/2019', amount: '100,50', type: 'expense', description: 'Teste' } as Entry,
-         { id: 3, name: 'Despesa CFD', catogoryId: categories[2].id, catogory: categories[2], paid: true,
-         date: '14/04/2019', amount: '90,45', type: 'revenue', description: 'Teste' } as Entry,
-         { id: 4, name: 'Despesa KKK', catogoryId: categories[3].id, catogory: categories[3], paid: false,
-         date: '14/04/2019', amount: '40,78', type: 'expense', description: 'Teste' } as Entry,
-         { id: 5, name: 'Despesa LLL', catogoryId: categories[4].id, catogory: categories[4], paid: true,
-         date: '14/04/2019', amount: '70,96', type: 'revenue', description: 'Teste' } as Entry
+        new Entry( 1, 'Despesa ABC', 'Teste', 'expense', '70,80', '14/04/2019',
+              true, categories[0].id, categories[0]),
+              new Entry( 2, 'Despesa CCC', 'Teste 2', 'revenue', '90,50', '17/04/2019',
+              true, categories[1].id, categories[1]),
+              new Entry( 3, 'Despesa DDD', 'Teste 4', 'revenue', '100,50', '20/05/2019',
+              true, categories[3].id, categories[3])
         ];
 
       return {categories, entries};
