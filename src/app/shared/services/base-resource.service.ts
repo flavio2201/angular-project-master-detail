@@ -53,17 +53,17 @@ export abstract class BaseResourceService<T extends BaseResourceModel> {
   }
 
   // PROTECTED METHODS
-  private  jasonDataToResources(jsonData: any[]): T[] {
+  protected  jasonDataToResources(jsonData: any[]): T[] {
     const resources: T[] = [];
      jsonData.forEach(element => resources.push(element as T));
      return resources;
    }
 
-   private  jasonDataToResource(jsonData: any): T {
+   protected  jasonDataToResource(jsonData: any): T {
      return jsonData as T;
    }
 
-  private handleError(error: any): Observable<any> {
+   protected handleError(error: any): Observable<any> {
      console.log( 'Erro na requisição =>' , error);
    return  throwError(error);
   }
