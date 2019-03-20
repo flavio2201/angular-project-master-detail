@@ -1,7 +1,7 @@
 import { CategoryService } from './../../categories/shared/category.service';
 import {BaseResourceService} from '../../../shared/services/base-resource.service';
 import { Injectable, Injector } from '@angular/core';
-import { Entry } from './Entry.model';
+import { Entry } from './entry.model';
 import { Observable, throwError} from 'rxjs';
 import { map, catchError, flatMap } from 'rxjs/operators';
 import * as moment from 'moment';
