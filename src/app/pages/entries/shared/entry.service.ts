@@ -24,6 +24,8 @@ export class EntryService extends BaseResourceService<Entry> {
   }
 
   public getByMonthAndYear(month: number , year: number): Observable <Entry[]> {
+    const t = this.getAll();
+    console.log(t);
     return this.getAll().pipe(
       map(entries => this.filterByMontAndYear(entries, month, year))
     );
@@ -40,10 +42,13 @@ export class EntryService extends BaseResourceService<Entry> {
   }
 
   private filterByMontAndYear(entries: Entry[], month: number, year: number){
+    console.log(month + year );
     return entries.filter(entry => {
+      console.log(entry.date);
+
     const entryDate = moment(entry.date, 'DD/MM/YYYY');
-    const monthMatches =  entryDate.month() + 1 === month;
-    const yearMatches =  entryDate.year() === year;
+    const monthMatches =  entryDate.month() + 1 == month;
+    const yearMatches =  entryDate.year() == year;
       if (monthMatches && yearMatches) { return entry; }
     });
   }

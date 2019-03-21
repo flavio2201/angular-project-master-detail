@@ -38,7 +38,7 @@ page-title= "Relatório de Receita e Despesas"
           <option value="2016">2016</option>
           <option value="2017">2017</option>
           <option value="2018">2018</option>
-          <option value="2019">2018</option>
+          <option value="2019">2019</option>
           <option value="2020">2020</option>
         </select>
       </div>
@@ -60,7 +60,7 @@ page-title= "Relatório de Receita e Despesas"
       </div>
       <div class="card-body">
           <h3 class="card-title">
-            1500
+            {{revenueTotal}}
           </h3>
       </div>
   </div>
@@ -70,7 +70,7 @@ page-title= "Relatório de Receita e Despesas"
       </div>
       <div class="card-body">
           <h3 class="card-title">
-            500
+            {{expenseTotal}}
           </h3>
       </div>
   </div>
@@ -80,7 +80,7 @@ page-title= "Relatório de Receita e Despesas"
       </div>
       <div class="card-body">
           <h3 class="card-title">
-            1000
+            {{balance}}
           </h3>
       </div>
   </div>
@@ -88,9 +88,9 @@ page-title= "Relatório de Receita e Despesas"
 <hr>
 <div class="row mt-5 mb-4">
   <div class="col-md-6">
-      GRAFICO DE RECEITAS
+      <p-chart type="bar" [data]="revenueChartData" [options]="chartOptions"></p-chart>
   </div>
   <div class="col-md-6">
-      GRAFICO DE DESPESAS
+    <p-chart type="bar" [data]="expenseChartData" [options]="chartOptions"></p-chart>
   </div>
 </div>
